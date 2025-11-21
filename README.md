@@ -2,9 +2,9 @@
 
 # Nextcloud Maps Geofavorites Android app
 
-[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/it/packages/it.danieleverducci.nextcloudmaps)
-[<img src="https://cdn.rawgit.com/steverichey/google-play-badge-svg/master/img/en_get.svg" height="80">](https://play.google.com/store/apps/details?id=it.danieleverducci.nextcloudmaps)
-[<img src="https://raw.githubusercontent.com/andOTP/andOTP/master/assets/badges/get-it-on-github.png" height="80">](https://github.com/penguin86/nextcloud-maps-client/releases/latest)
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/it/packages/com.nickgirga.nextcloudmapsgeofavorites)
+[<img src="https://cdn.rawgit.com/steverichey/google-play-badge-svg/master/img/en_get.svg" height="80">](https://play.google.com/store/apps/details?id=com.nickgirga.nextcloudmapsgeofavorites)
+[<img src="https://raw.githubusercontent.com/andOTP/andOTP/master/assets/badges/get-it-on-github.png" height="80">](https://github.com/nickgirga/nextcloud-maps-geofavorites-android/releases/latest)
 
 (Always prefer [F-Droid](https://f-droid.org) build, when possible).
 
@@ -17,4 +17,3 @@ A new geofavorite can be created on current location, by sharing a "geo:" uri fr
 This work is heavily based on [matiasdelellis's Nextcloud SSO example](https://github.com/matiasdelellis/app-tutorial-android) to implement [Nextcloud single sign on](https://github.com/nextcloud/Android-SingleSignOn).
 
 ![Screenshot 1](screenshots/1.png)      ![Screenshot 2](screenshots/2.png)      ![Screenshot 3](screenshots/3.png)
-

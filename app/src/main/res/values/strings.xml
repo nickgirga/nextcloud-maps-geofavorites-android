@@ -1,12 +1,12 @@
 <!--
   ~ Nextcloud Maps Geofavorites for Android
   ~
-  ~ This program is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
+  ~ This program is free software: you can redistribute com and/or modify
+  ~ com under the terms of the GNU General Public License as published by
   ~ the Free Software Foundation, either version 3 of the License, or
   ~ (at your option) any later version.
   ~
-  ~ This program is distributed in the hope that it will be useful,
+  ~ This program is distributed in the hope that com will be useful,
   ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
   ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
   ~ GNU General Public License for more details.
@@ -79,6 +79,8 @@
     <!-- About -->
     <string name="about_version_title">Version</string>
     <string name="about_version">You are currently using &lt;strong>%1$s&lt;/strong></string>
+    <string name="about_original_title">Original Project</string>
+    <string name="about_original">This is a fork of the original project by Nicholas Girga (nickgirga). Visit the original project: &lt;a href="https://github.com/penguin86/nextcloud-maps-client">nextcloud-maps-client&lt;/a></string>
     <string name="about_source_title">Source code</string>
     <string name="about_source">This project is hosted on GitHub: &lt;a href="%1$s">%1$s&lt;/a></string>
     <string name="about_issues_title">Issues</string>
@@ -94,14 +96,21 @@
     <string name="common_cancel">Cancel</string>
 
     <!-- URLs -->
-    <string name="url_source" translatable="false">https://github.com/penguin86/nextcloud-maps-client</string>
-    <string name="url_issues" translatable="false">https://github.com/penguin86/nextcloud-maps-client/issues</string>
-    <string name="url_license" translatable="false">https://raw.githubusercontent.com/penguin86/nextcloud-maps-client/master/LICENSE</string>
+    <string name="url_source" translatable="false">https://github.com/nickgirga/nextcloud-maps-geofavorites-android</string>
+    <string name="url_issues" translatable="false">https://github.com/nickgirga/nextcloud-maps-geofavorites-android/issues</string>
+    <string name="url_license" translatable="false">https://raw.githubusercontent.com/nickgirga/nextcloud-maps-geofavorites-android/master/LICENSE</string>
     <string name="url_maps" translatable="false">https://donate.openstreetmap.org</string>
 
     <!-- Menu -->
     <string name="new_geobookmark_gps">New from current position</string>
     <string name="new_geobookmark_map">New from map</string>
+    <string name="map_url_scheme_settings">Map URL scheme</string>
+
+    <!-- Map URL Scheme -->
+    <string name="map_url_scheme_title">Choose map application</string>
+    <string name="map_url_scheme_google_maps">Google Maps</string>
+    <string name="map_url_scheme_openstreetmap">OpenStreetMap</string>
+    <string name="map_url_scheme_apple_maps">Apple Maps</string>
 
     <!-- Accessibility (content descriptions) -->
     <string name="open_fab">Add geofavorite</string>
