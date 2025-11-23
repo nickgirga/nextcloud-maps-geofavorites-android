@@ -66,6 +66,9 @@ public class MapUrlSchemeDialogFragment extends DialogFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        // Set dialog style for rounded corners
+        setStyle(DialogFragment.STYLE_NO_FRAME, R.style.RoundedDialogStyle);
 
         // keep the state of the fragment on configuration changes
         setRetainInstance(true);
@@ -82,6 +85,11 @@ public class MapUrlSchemeDialogFragment extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.map_url_scheme_fragment, container, false);
+
+        // Make dialog background transparent to show rounded corners
+        if (getDialog() != null && getDialog().getWindow() != null) {
+            getDialog().getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        }
 
         setupDialogElements(mView);
         setupListeners();
@@ -154,7 +162,11 @@ public class MapUrlSchemeDialogFragment extends DialogFragment {
     @Override
     @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        return super.onCreateDialog(savedInstanceState);
+        Dialog dialog = super.onCreateDialog(savedInstanceState);
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        }
+        return dialog;
     }
 
     @Override

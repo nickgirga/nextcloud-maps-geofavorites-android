@@ -22,7 +22,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minWidth="300dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/dialog_background"
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/header"
@@ -198,16 +200,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="end">
+        android:gravity="end"
+        android:padding="8dp">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/cancel"
+            style="@style/Widget.Material3.Button.TextButton.Dialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/common_cancel"
-            android:textAllCaps="false"
-            android:layout_marginTop="@dimen/standard_half_margin"
-            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"/>
+            android:textAllCaps="false" />
 
     </LinearLayout>
 

@@ -23,6 +23,7 @@ package com.nickgirga.nextcloudmapsgeofavorites.api;
 import java.util.List;
 
 import com.nickgirga.nextcloudmapsgeofavorites.model.Geofavorite;
+import com.nickgirga.nextcloudmapsgeofavorites.model.NextcloudTheme;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
@@ -52,4 +53,7 @@ public interface API {
     Call<Geofavorite> deleteGeofavorite (
             @Path("id") int id
     );
+
+    @GET("/index.php/apps/theming/theme")
+    Call<NextcloudTheme> getTheme();
 }

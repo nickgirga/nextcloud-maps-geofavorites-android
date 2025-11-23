@@ -49,6 +49,7 @@ import com.nickgirga.nextcloudmapsgeofavorites.fragments.GeofavoriteListFragment
 import com.nickgirga.nextcloudmapsgeofavorites.fragments.GeofavoriteMapFragment;
 import com.nickgirga.nextcloudmapsgeofavorites.repository.GeofavoriteRepository;
 import com.nickgirga.nextcloudmapsgeofavorites.utils.SettingsManager;
+import com.nickgirga.nextcloudmapsgeofavorites.utils.ThemeUtils;
 
 public class MainActivity extends NextcloudMapsStyledActivity {
 
@@ -136,6 +137,34 @@ public class MainActivity extends NextcloudMapsStyledActivity {
         setupNavigationMenu();
 
         drawerLayout = findViewById(R.id.drawerLayout);
+
+        // Fetch Nextcloud theme colors
+        ThemeUtils.fetchAndSaveTheme(this);
+    }
+
+    @Override
+    protected void applyThemeColor() {
+        super.applyThemeColor();
+        
+        // Apply theme to FABs using Material 3 colors
+        FloatingActionButton openFab = findViewById(R.id.open_fab);
+        FloatingActionButton addFromGpsFab = findViewById(R.id.add_from_gps);
+        FloatingActionButton addFromMapFab = findViewById(R.id.add_from_map);
+        
+        applyThemeToFab(openFab);
+        applyThemeToFab(addFromGpsFab);
+        applyThemeToFab(addFromMapFab);
+        
+        // Apply theme to drawer header with Material 3 primary color
+        View drawerHeader = findViewById(R.id.header_view);
+        if (drawerHeader != null) {
+            int primaryColor = com.google.android.material.color.MaterialColors.getColor(
+                this,
+                com.google.android.material.R.attr.colorPrimary,
+                ThemeUtils.getThemeColor(this)
+            );
+            drawerHeader.setBackgroundColor(primaryColor);
+        }
     }
 
     @Override
@@ -214,6 +243,7 @@ public class MainActivity extends NextcloudMapsStyledActivity {
     public void switch_account() {
         ApiProvider.logout();
         GeofavoriteRepository.resetInstance();
+        ThemeUtils.clearTheme(this);
         SingleAccountHelper.applyCurrentAccount(this, null);
         Intent intent = new Intent(MainActivity.this, LoginActivity.class);
         startActivity(intent);
@@ -221,22 +251,60 @@ public class MainActivity extends NextcloudMapsStyledActivity {
     }
 
     private void openFab(boolean open) {
-        View fab = findViewById(R.id.open_fab);
-        View addFromGpsFab = findViewById(R.id.add_from_gps);
-        View addFromMapFab = findViewById(R.id.add_from_map);
+        FloatingActionButton addFromGpsFab = findViewById(R.id.add_from_gps);
+        FloatingActionButton addFromMapFab = findViewById(R.id.add_from_map);
 
         if (open) {
             this.isFabOpen = true;
-            fab.animate().rotation(45.0f);
-            addFromGpsFab.animate().translationY(-getResources().getDimension(R.dimen.fab_vertical_offset));
-            addFromMapFab.animate().translationY(-getResources().getDimension(R.dimen.fab_vertical_offset) * 2);
+            
+            // Show sub-FABs with fade and scale animation
+            addFromGpsFab.setVisibility(View.VISIBLE);
+            addFromGpsFab.setAlpha(0f);
+            addFromGpsFab.setScaleX(0f);
+            addFromGpsFab.setScaleY(0f);
+            addFromGpsFab.setTranslationY(0);
+            addFromGpsFab.animate()
+                .alpha(1f)
+                .scaleX(1f)
+                .scaleY(1f)
+                .translationY(-getResources().getDimension(R.dimen.fab_vertical_offset))
+                .setDuration(200)
+                .start();
+            
+            addFromMapFab.setVisibility(View.VISIBLE);
+            addFromMapFab.setAlpha(0f);
+            addFromMapFab.setScaleX(0f);
+            addFromMapFab.setScaleY(0f);
+            addFromMapFab.setTranslationY(0);
+            addFromMapFab.animate()
+                .alpha(1f)
+                .scaleX(1f)
+                .scaleY(1f)
+                .translationY(-getResources().getDimension(R.dimen.fab_vertical_offset) * 2)
+                .setDuration(250)
+                .start();
         } else {
             this.isFabOpen = false;
-            fab.animate().rotation(0f);
-            addFromGpsFab.animate().translationY(0);
-            addFromMapFab.animate().translationY(0);
+            
+            // Hide sub-FABs with fade and scale animation
+            addFromGpsFab.animate()
+                .alpha(0f)
+                .scaleX(0f)
+                .scaleY(0f)
+                .translationY(0)
+                .setDuration(150)
+                .withEndAction(() -> addFromGpsFab.setVisibility(View.GONE))
+                .start();
+            
+            addFromMapFab.animate()
+                .alpha(0f)
+                .scaleX(0f)
+                .scaleY(0f)
+                .translationY(0)
+                .setDuration(150)
+                .withEndAction(() -> addFromMapFab.setVisibility(View.GONE))
+                .start();
         }
-
     }
 
     public interface OnGpsPermissionGrantedListener {

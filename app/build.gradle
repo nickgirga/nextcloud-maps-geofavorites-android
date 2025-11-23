@@ -15,7 +15,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
     compileSdkVersion 34
@@ -39,12 +41,13 @@ android {
     compileOptions {
         // Flag to enable support for the new language APIs
         coreLibraryDesugaringEnabled true
-        // Sets Java compatibility to Java 8
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        // Sets Java compatibility to Java 11
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     buildFeatures {
+        buildConfig true
         dataBinding true
     }
     namespace 'com.nickgirga.nextcloudmapsgeofavorites'
@@ -61,13 +64,20 @@ dependencies {
     // Desugaring lib: see https://developer.android.com/studio/write/java8-support
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.3")
 
-    implementation 'com.android.support:design:34.0.0'
+    // Material Design 3 (Material You)
+    implementation 'com.google.android.material:material:1.11.0'
+    
+    // AndroidX Core
     implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.recyclerview:recyclerview:1.3.2'
-    implementation "androidx.cardview:cardview:1.0.0"
+    implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation "androidx.preference:preference:1.2.1"
+    implementation 'androidx.preference:preference:1.2.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    
+    // Lifecycle components for dynamic theming
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
 
     // Retrofif2
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'

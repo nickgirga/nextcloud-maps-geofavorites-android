@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.SearchView;
@@ -184,7 +184,7 @@ public abstract class GeofavoritesFragment extends Fragment {
     }
 
     private void showGeofavoriteDeteleDialog(Geofavorite item) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(requireContext(), R.style.AlertDialogTheme);
         builder.setMessage(getString(R.string.dialog_delete_message).replace("{name}", item.getName() != null ? item.getName() : ""))
                 .setTitle(R.string.dialog_delete_title)
                 .setPositiveButton(R.string.dialog_delete_delete, new DialogInterface.OnClickListener() {
@@ -198,12 +198,11 @@ public abstract class GeofavoritesFragment extends Fragment {
                         dialog.dismiss();
                     }
                 });
-        AlertDialog ad = builder.create();
-        ad.show();
+        builder.create().show();
     }
 
     private void showSwitchAccountDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(requireContext(), R.style.AlertDialogTheme);
         builder.setMessage(R.string.dialog_logout_message)
                 .setTitle(R.string.dialog_logout_title)
                 .setPositiveButton(android.R.string.yes, (dialog, id) -> {
@@ -212,8 +211,7 @@ public abstract class GeofavoritesFragment extends Fragment {
                     dialog.dismiss();
                 })
                 .setNegativeButton(android.R.string.no, (dialog, id) -> dialog.dismiss());
-        AlertDialog ad = builder.create();
-        ad.show();
+        builder.create().show();
     }
 
     private void showCategoryFilterDialog() {
@@ -222,7 +220,7 @@ public abstract class GeofavoritesFragment extends Fragment {
             return;
         }
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(requireContext(), R.style.AlertDialogTheme);
         builder.setTitle(R.string.filtering_dialog_title);
         CategoriesAdapter ca = new CategoriesAdapter(requireContext());
         ca.setCategoriesList(categories);
@@ -248,8 +246,7 @@ public abstract class GeofavoritesFragment extends Fragment {
             filterButton.setImageResource(R.drawable.ic_filter_off);
             filterByCategory(null);
         });
-        AlertDialog dialog = builder.create();
-        dialog.show();
+        builder.create().show();
     }
 
     private void updateToolbars(boolean disableSearch) {

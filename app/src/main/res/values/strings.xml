@@ -37,7 +37,7 @@
     <string name="dialog_delete_title">Delete geofavorite</string>
     <string name="dialog_delete_message">You are about to delete geofavorite {name}. Proceed?</string>
     <string name="dialog_delete_delete">Delete</string>
-    <string name="dialog_delete_cancel">Maintain</string>
+    <string name="dialog_delete_cancel">Cancel</string>
     <string name="dialog_logout_title">Switch account</string>
     <string name="dialog_logout_message">Do you want to switch account?</string>
     <string name="list_geofavorite_deleted">Geofavorite deleted</string>
@@ -117,4 +117,10 @@
     <string name="add_from_gps">Add geofavorite at current GPS position</string>
     <string name="add_from_map">Add geofavorite from map</string>
     <string name="menu">Open menu</string>
+
+    <!-- Error messages -->
+    <string name="current_account_not_found_exception_title">Account not found</string>
+    <string name="current_account_not_found_exception_message">The current account was not found</string>
+    <string name="nextcloud_files_api_not_responding_open_battery_optimization_settings">Nextcloud Files API is not responding. Open battery optimization settings</string>
+    <string name="unknown_error">Unknown error</string>
 </resources>

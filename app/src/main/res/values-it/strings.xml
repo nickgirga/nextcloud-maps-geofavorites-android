@@ -114,8 +114,14 @@
     <string name="map_url_scheme_apple_maps">Apple Maps</string>
 
     <!-- Accessibility (content descriptions) -->
-    <string name="open_fab">Aggiungi</string>
-    <string name="add_from_gps">Crea dalla posizione corrente</string>
-    <string name="add_from_map">Crea dalla mappa</string>
+    <string name="open_fab">Aggiungi geofavorite</string>
+    <string name="add_from_gps">Aggiungi geofavorite alla posizione GPS attuale</string>
+    <string name="add_from_map">Aggiungi geofavorite dalla mappa</string>
+    <string name="menu">Apri menu</string>
 
+    <!-- Error messages -->
+    <string name="current_account_not_found_exception_title">Account non trovato</string>
+    <string name="current_account_not_found_exception_message">L\'account corrente non è stato trovato</string>
+    <string name="nextcloud_files_api_not_responding_open_battery_optimization_settings">L\'API di Nextcloud Files non risponde. Aprire le impostazioni di ottimizzazione della batteria</string>
+    <string name="unknown_error">Errore sconosciuto</string>
 </resources>

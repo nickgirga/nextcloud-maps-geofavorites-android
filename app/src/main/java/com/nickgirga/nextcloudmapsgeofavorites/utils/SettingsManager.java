@@ -13,6 +13,7 @@ public class SettingsManager {
     static private final String SETTING_LAST_MAP_POSITION_LNG = "SETTING_LAST_MAP_POSITION_LNG";
     static private final String SETTING_LAST_MAP_POSITION_ZOOM = "SETTING_LAST_MAP_POSITION_ZOOM";
     static private final String SETTING_MAP_URL_SCHEME = "SETTING_MAP_URL_SCHEME";
+    static private final String SETTING_THEME_COLOR = "SETTING_THEME_COLOR";
 
     public static int getGeofavoriteListSortBy(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
@@ -64,5 +65,22 @@ public class SettingsManager {
     public static void setMapUrlScheme(Context context, int urlScheme) {
         PreferenceManager.getDefaultSharedPreferences(context)
             .edit().putInt(SETTING_MAP_URL_SCHEME, urlScheme).apply();
+    }
+
+    /**
+     * Get the stored Nextcloud theme color.
+     * Returns null if no theme color has been fetched yet.
+     */
+    public static String getThemeColor(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getString(SETTING_THEME_COLOR, null);
+    }
+
+    /**
+     * Store the Nextcloud theme color.
+     */
+    public static void setThemeColor(Context context, String color) {
+        PreferenceManager.getDefaultSharedPreferences(context)
+            .edit().putString(SETTING_THEME_COLOR, color).apply();
     }
 }
