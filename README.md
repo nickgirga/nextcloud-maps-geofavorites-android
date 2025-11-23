@@ -4,11 +4,12 @@
 
 An Android app for viewing and managing your Nextcloud Maps geofavorites (location bookmarks) on your mobile device.
 
-[<img src="https://raw.githubusercontent.com/andOTP/andOTP/master/assets/badges/get-it-on-github.png" height="80">](https://github.com/nickgirga/nextcloud-maps-geofavorites-android/releases/latest)
+[<img src="./.assets/install_buttons/get-it-on-github.png" height="80">](https://github.com/nickgirga/nextcloud-maps-geofavorites-android/releases/latest)
+[<img src="./.assets/install_buttons/get-it-on-github-actions.png" height="80">](https://github.com/nickgirga/nextcloud-maps-geofavorites-android/actions)
 
 ## About This Project
 
-This is a maintained fork of the [original Nextcloud Maps Geofavorites app](https://github.com/tfederico/nextcloud_maps_client) by tfederico. The original project has not received updates in several years, so this fork provides continued maintenance, bug fixes, and new features.
+This is a maintained fork of the [original Nextcloud Maps Geofavorites app](https://github.com/penguin86/nextcloud-maps-client) by penguin86. The original project has not received updates in several years, so this fork provides continued maintenance, bug fixes, and new features.
 
 **Key differences from the original:**
 - **Active maintenance** - Regular bug fixes and updates to keep the app working with modern Android versions
@@ -39,10 +40,10 @@ This app connects to your Nextcloud server and allows you to:
 [Obtanium](https://github.com/ImranR98/Obtanium) is an app that allows you to install and update apps directly from their source repositories.
 
 1. Install Obtanium from [F-Droid](https://f-droid.org/packages/dev.imranr.obtainium.fdroid/) or [GitHub](https://github.com/ImranR98/Obtanium/releases)
-2. In Obtanium, add this app using the repository URL: `https://github.com/nickgirga/nextcloud-maps-geofavorites-android`
+2. In Obtanium, add this app using the repository URL: `https://github.com/nickgirga/nextcloud-maps-geofavorites-android` (if using GitHub actions, enable prereleases)
 3. Obtanium will automatically notify you of and install new releases
 
-Every commit to the main branch of this repository triggers an automatic build, so you'll receive updates frequently.
+Every commit to the main branch of this repository triggers an automatic build, so you'll receive updates frequently if using prereleases.
 
 ### Option 2: Manual Installation
 
@@ -75,7 +76,7 @@ If you want to build the app yourself:
 ## Technical Credits
 
 This app's codebase is based on:
-- The [original Nextcloud Maps Geofavorites app](https://github.com/tfederico/nextcloud_maps_client) by tfederico - Provided the initial app implementation
+- The [original Nextcloud Maps Geofavorites app](https://github.com/penguin86/nextcloud-maps-client) by tfederico - Provided the initial app implementation
 - [matiasdelellis's Nextcloud SSO example](https://github.com/matiasdelellis/app-tutorial-android) - Demonstrated how to implement [Nextcloud Single Sign-On](https://github.com/nextcloud/Android-SingleSignOn) authentication
 
 ## License
