@@ -71,13 +71,16 @@ If you want to build the app yourself:
 
 ## Screenshots
 
-![Screenshot 1](screenshots/1.png)      ![Screenshot 2](screenshots/2.png)      ![Screenshot 3](screenshots/3.png)
+<img width="222" alt="Drawer Screenshot" src="./.assets/screenshots/screenshot_drawer.png" />
+<img width="222" alt="Drawer Screenshot" src="./.assets/screenshots/screenshot_list.png" />
+<img width="222" alt="Drawer Screenshot" src="./.assets/screenshots/screenshot_map.png" />
 
 ## Technical Credits
 
 This app's codebase is based on:
 - The [original Nextcloud Maps Geofavorites app](https://github.com/penguin86/nextcloud-maps-client) by tfederico - Provided the initial app implementation
 - [matiasdelellis's Nextcloud SSO example](https://github.com/matiasdelellis/app-tutorial-android) - Demonstrated how to implement [Nextcloud Single Sign-On](https://github.com/nextcloud/Android-SingleSignOn) authentication
+- The [forked Nextcloud Maps Geofavorite app](https://github.com/penguin86/nextcloud-maps-client) by penguin86 - Implemented Single Sign-On; maintained until [bd8a0d7](https://github.com/penguin86/nextcloud-maps-client/commit/bd8a0d706dc7bbb34c8b958dc1a24d0e8897bd33) on Feb 29, 2024
 
 ## License
 
