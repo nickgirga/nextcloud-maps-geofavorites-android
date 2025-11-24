@@ -14,6 +14,7 @@ This is a maintained fork of the [original Nextcloud Maps Geofavorites app](http
 **Key differences from the original:**
 - **Active maintenance** - Regular bug fixes and updates to keep the app working with modern Android versions
 - **Additional map app support** - Now supports opening locations in OpenStreetMap and Apple Maps apps, not just Google Maps
+- **Google's Material 3 Design** - Now utilizes [Material 3 components](https://m3.material.io/) for a more modern feel on Android and to eventually use for [dynamic system colors](https://m3.material.io/styles/color/dynamic/choosing-a-source) and [Nextcloud instance colors](https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/theming.html) ([both not yet implemented](https://github.com/nickgirga/nextcloud-maps-geofavorites-android/issues/5))
 - **Automated builds** - GitHub Actions automatically builds and signs releases on every commit to the main branch, making it easy to install and update via [Obtanium](https://github.com/ImranR98/Obtanium)
 - **Updated package name** - Uses `com.nickgirga.nextcloudmapsgeofavorites` instead of the original package name
 
