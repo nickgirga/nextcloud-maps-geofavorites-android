@@ -15,7 +15,7 @@ This is a maintained fork of the [original Nextcloud Maps Geofavorites app](http
 - **Active maintenance** - Regular bug fixes and updates to keep the app working with modern Android versions
 - **Additional map app support** - Now supports opening locations in OpenStreetMap and Apple Maps apps, not just Google Maps
 - **Google's Material 3 Design** - Now utilizes [Material 3 components](https://m3.material.io/) for a more modern feel on Android and to eventually use for [dynamic system colors](https://m3.material.io/styles/color/dynamic/choosing-a-source) and [Nextcloud instance colors](https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/theming.html) ([both not yet implemented](https://github.com/nickgirga/nextcloud-maps-geofavorites-android/issues/5))
-- **Automated builds** - GitHub Actions automatically builds and signs releases on every commit to the main branch, making it easy to install and update via [Obtanium](https://github.com/ImranR98/Obtanium)
+- **Automated builds** - GitHub Actions automatically builds and signs releases on every commit to the main branch, making it easy to install and update via [Obtainium](https://github.com/ImranR98/Obtainium)
 - **Updated package name** - Uses `com.nickgirga.nextcloudmapsgeofavorites` instead of the original package name
 
 ## What Does This App Do?
@@ -36,13 +36,13 @@ This app connects to your Nextcloud server and allows you to:
 
 ## Installation
 
-### Option 1: Install via Obtanium (Recommended)
+### Option 1: Install via Obtainium (Recommended)
 
-[Obtanium](https://github.com/ImranR98/Obtanium) is an app that allows you to install and update apps directly from their source repositories.
+[Obtainium](https://github.com/ImranR98/Obtainium) is an app that allows you to install and update apps directly from their source repositories.
 
-1. Install Obtanium from [F-Droid](https://f-droid.org/packages/dev.imranr.obtainium.fdroid/) or [GitHub](https://github.com/ImranR98/Obtanium/releases)
-2. In Obtanium, add this app using the repository URL: `https://github.com/nickgirga/nextcloud-maps-geofavorites-android` (if using GitHub actions, enable prereleases)
-3. Obtanium will automatically notify you of and install new releases
+1. Install Obtainium from [F-Droid](https://f-droid.org/packages/dev.imranr.obtainium.fdroid/) or [GitHub](https://github.com/ImranR98/Obtainium/releases)
+2. In Obtainium, add this app using the repository URL: `https://github.com/nickgirga/nextcloud-maps-geofavorites-android` (if using GitHub actions, enable prereleases)
+3. Obtainium will automatically notify you of and install new releases
 
 Every commit to the main branch of this repository triggers an automatic build, so you'll receive updates frequently if using prereleases.
 
