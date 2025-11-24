@@ -1,4 +1,4 @@
-![Nextcloud Maps Geofavorites Logo](/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
+![Nextcloud Maps Geofavorites Logo](./.assets/icons/square_icon.png)
 
 # Nextcloud Maps Geofavorites
 
